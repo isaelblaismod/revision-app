@@ -4,6 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
+import { SidebarModule } from './sidebar/sidebar.module';
+import { FooterModule } from './shared/footer/footer.module';
+import { NavbarModule} from './shared/navbar/navbar.module';
+import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
+
 /* Custom component */
 import { PeopleComponentComponent } from './people-component/people-component.component'
 import { HomeComponentComponent } from './home-component/home-component.component';
@@ -28,6 +33,10 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    SidebarModule,
+    NavbarModule,
+    FooterModule,
+    FixedPluginModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

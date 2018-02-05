@@ -1,19 +1,13 @@
-<div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav">
-      <h4>App Revision</h4>
-      <ul class="nav flex-column">
-        <li class="nav-item" ><a routerLink="/home" routerLinkActive="active">Home</a></li>
-        <li class="nav-item" ><a routerLink="/people" routerLinkActive="active">People</a></li>
-      </ul><br>
-    </div>
-
-    <div class="col-sm-9">
-      <router-outlet></router-outlet>
-    </div>
+<div class="wrapper">
+  <div class="sidebar" data-background-color="white" data-active-color="danger">
+      <sidebar-cmp></sidebar-cmp>
+  </div>
+  <div class="main-panel">
+      <navbar-cmp></navbar-cmp>
+      <div class="content">
+          <router-outlet></router-outlet>
+      </div>
+      <footer-cmp></footer-cmp>
   </div>
 </div>
-
-<footer class="container-fluid">
-  <p>Copyright App Revision</p>
-</footer>
+<fixedplugin-cmp></fixedplugin-cmp>
